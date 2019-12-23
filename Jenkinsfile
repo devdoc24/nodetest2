@@ -19,7 +19,10 @@ node(){
            env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
            // on windows
           //env.PATH="${env.NODEJS_HOME};${env.PATH}"
-          sh 'npm --version'
+          sh '''
+          npm --version
+          node --version
+          '''
         //tool name: 'node', type: 'nodejs' //use tool from predefined tool installation
         //sh 'npm config ls'
         }

@@ -14,7 +14,7 @@ node(){
               userRemoteConfigs: [[url: 'https://github.com/devdoc24/nodetest2.git']]])
   }
   stage('Prepare Environment'){
-            env.NODEJS_HOME = "${tool 'Node'}"
+            env.NODEJS_HOME = "${tool 'node'}"
             // on linux / mac
            env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
            // on windows

@@ -14,7 +14,13 @@ node(){
               userRemoteConfigs: [[url: 'https://github.com/devdoc24/nodetest2.git']]])
   }
   stage('Prepare Environment'){
-        tool name: 'node', type: 'nodejs' //use tool from predefined tool installation
-        sh 'npm config ls'
+            env.NODEJS_HOME = "${tool 'Node'}"
+            // on linux / mac
+           env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+           // on windows
+          //env.PATH="${env.NODEJS_HOME};${env.PATH}"
+          sh 'npm --version'
+        //tool name: 'node', type: 'nodejs' //use tool from predefined tool installation
+        //sh 'npm config ls'
         }
 }

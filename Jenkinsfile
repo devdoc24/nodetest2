@@ -13,6 +13,7 @@ node(){
               extensions: [], submoduleCfg: [],
               userRemoteConfigs: [[url: 'https://github.com/devdoc24/nodetest2.git']]])
   }
-  
-
+  stage('Prepare Environment'){
+        sh 'npm config ls'
+        }
 }

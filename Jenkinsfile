@@ -26,4 +26,8 @@ node(){
         //tool name: 'node', type: 'nodejs' //use tool from predefined tool installation
         //sh 'npm config ls'
         }
+        
+        stage ('Build Nodejs'){
+        sh 'npm pack'
+        }
 }

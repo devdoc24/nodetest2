@@ -31,6 +31,4 @@ node(){
         sh 'npm pack'
         }
         
-        stage ('test'){
-        }
 }

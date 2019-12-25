@@ -31,7 +31,7 @@ node(){
         sh 'npm pack'
         }
         
-        stage (''publish to artifactory){
+        stage ('publish to artifactory'){
                 
         }
         

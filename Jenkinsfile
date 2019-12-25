@@ -31,6 +31,10 @@ node(){
         sh 'npm pack'
         }
         
-        deleteDir()
+        stage (''publish to artifactory){
+                
+        }
+        
+        //deleteDir()
         
 }

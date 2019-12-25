@@ -31,4 +31,6 @@ node(){
         sh 'npm pack'
         }
         
+        deleteDir()
+        
 }

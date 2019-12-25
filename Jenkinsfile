@@ -30,4 +30,7 @@ node(){
         stage ('Build Nodejs'){
         sh 'npm pack'
         }
+        
+        stage ('test'){
+        }
 }

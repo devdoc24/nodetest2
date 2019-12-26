@@ -1,4 +1,4 @@
-node('linux'){
+node('master'){
         
         
   stage('prepareWorksapce'){

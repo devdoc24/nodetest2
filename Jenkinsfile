@@ -37,7 +37,7 @@ node('master') {
                   "files": [
                     {
                       "pattern": "/*.tgz",
-                      "target": "/mylocalrepo/"
+                      "target": "/webapp/#/artifacts/browse/tree/General/mylocalrepo/"
                     }
                  ]
                 }"""

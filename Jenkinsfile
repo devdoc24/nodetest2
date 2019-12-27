@@ -1,5 +1,6 @@
 node('master') {
         
+  def workspace = pwd()
         
   stage('prepareWorksapce'){
         echo "====Hello World===="
@@ -29,6 +30,7 @@ node('master') {
         
         stage ('Build Nodejs'){
         sh 'npm pack'
+        echo "$workspace"
         echo "$PWD"
         }
         

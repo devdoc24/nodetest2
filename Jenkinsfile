@@ -32,7 +32,7 @@ node('master') {
         }
         
         stage ('PublishToArtifactory'){
-                eco "$PWD"
+                echo "$PWD"
                 def server = Artifactory.server 'artifactory'
                 def uploadSpec = """{
                   "files": [

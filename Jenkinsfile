@@ -43,6 +43,10 @@ node('linux') {
                     {
                       "pattern": "$workspace/*.tgz",
                       "target": "mylocalrepo/nodetest2/"
+                    },
+                    {
+                      "pattern": "$workspace/*.json",
+                      "target": "mylocalrepo/jsonfiles/"
                     }
                  ]
                 }"""

@@ -1,4 +1,4 @@
-node('linux') {
+node('master') {
         
         
   stage('prepareWorksapce'){
@@ -36,7 +36,7 @@ node('linux') {
                 def uploadSpec = """{
                   "files": [
                     {
-                      "pattern": "/*.zip",
+                      "pattern": "/*.tgz",
                       "target": "/nodetest2/"
                     }
                  ]

@@ -29,6 +29,7 @@ node('master') {
         
         stage ('Build Nodejs'){
         sh 'npm pack'
+        echo "$PWD"
         }
         
         stage ('PublishToArtifactory'){

@@ -42,7 +42,7 @@ node('master') {
                   "files": [
                     {
                       "pattern": "$workspace/*.tgz",
-                      "target": "mylocalrepo/nodetest2/"
+                      "target": "mylocalrepo"
                     }
                  ]
                 }"""

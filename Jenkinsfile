@@ -36,11 +36,12 @@ node('master') {
         
         stage ('PublishToArtifactory'){
                 echo "$PWD"
+                echo "$workspace"
                 def server = Artifactory.server 'artifactory'
                 def uploadSpec = """{
                   "files": [
                     {
-                      "pattern": "/*.tgz",
+                      "pattern": "$workspace/*.tgz",
                       "target": "/mylocalrepo/"
                     }
                  ]

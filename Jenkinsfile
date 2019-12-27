@@ -31,4 +31,16 @@ node('linux') {
         sh 'npm pack'
         }
         
+        stage ('PublishToArtifactory'){
+                def server = Artifactory.server 'artifactory'
+                def uploadSpec = """{
+                  "files": [
+                    {
+                      "pattern": "/*.zip",
+                      "target": "/nodetest2/"
+                    }
+                 ]
+                }"""
+                server.upload spec: uploadSpec
+                        }
 }
